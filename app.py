@@ -82,5 +82,6 @@ if st.button("Recalcular"):
     axs[2].grid(True)
 
     # Exibindo o gráfico na aplicação Streamlit
+    plt.tight_layout()
     st.pyplot(fig)
 
