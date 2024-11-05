@@ -3,8 +3,11 @@ import matplotlib.pyplot as plt
 import streamlit as st
 
 # Exibindo uma imagem no cabeçalho
-st.image("logo.png", width=150)  # Altere para o caminho da imagem ou URL
-st.title("Análise Estrutural de uma Ponte com Streamlit")
+st.image("logo.png", width=300)  # Altere para o caminho da imagem ou URL
+st.title("Análise Estrutural de uma Ponte")
+st.caption("Ferramenta interativa para análise de carga distribuída e reações de apoio.")
+st.caption("Desenvolvido em Python pela Profa. Adriana Regina Tozzi para a Disciplina")
+st.caption("de Pontes do Curso de Engenharia Civil do Centro Universitário Uninter.")
 
 # Parâmetros ajustáveis na interface
 comprimento_ponte = st.number_input("Comprimento total da ponte (m)", value=100)
