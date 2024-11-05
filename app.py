@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import streamlit as st
 
 # Exibindo uma imagem no cabeçalho
-st.image("caminho_para_sua_imagem/logo.png", width=150)  # Altere para o caminho da imagem ou URL
+st.image("logo.png", width=150)  # Altere para o caminho da imagem ou URL
 st.title("Análise Estrutural de uma Ponte com Streamlit")
 
 # Parâmetros ajustáveis na interface
