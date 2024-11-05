@@ -92,29 +92,28 @@ if st.button("Recalcular"):
     st.pyplot(fig)
 
     # Plotando os gráficos para cada longarina individualmente
-    for longarina in range(1, num_longarinas + 1):
-        st.subheader(f"Diagrama para a Longarina {longarina}")
+    st.subheader(f"Diagrama para cada Longarina")
 
-        fig_longarina, axs_longarina = plt.subplots(2, 1, figsize=(10, 8))
+    fig_longarina, axs_longarina = plt.subplots(2, 1, figsize=(10, 8))
 
-        # Diagrama de Força Cortante para a Longarina
-        axs_longarina[0].plot(x_pontos, forca_cortante_por_longarina, color="orange", label="Força Cortante")
-        axs_longarina[0].fill_between(x_pontos, forca_cortante_por_longarina, color="orange", alpha=0.3)
-        axs_longarina[0].set_title(f"Força Cortante - Longarina {longarina}")
-        axs_longarina[0].set_xlabel("Comprimento da Ponte (m)")
-        axs_longarina[0].set_ylabel("Força Cortante (kN)")
-        axs_longarina[0].legend()
-        axs_longarina[0].grid(True)
+    # Diagrama de Força Cortante para a Longarina
+    axs_longarina[0].plot(x_pontos, forca_cortante_por_longarina, color="orange", label="Força Cortante")
+    axs_longarina[0].fill_between(x_pontos, forca_cortante_por_longarina, color="orange", alpha=0.3)
+    axs_longarina[0].set_title(f"Força Cortante - Longarina")
+    axs_longarina[0].set_xlabel("Comprimento da Ponte (m)")
+    axs_longarina[0].set_ylabel("Força Cortante (kN)")
+    axs_longarina[0].legend()
+    axs_longarina[0].grid(True)
 
-        # Diagrama de Momento Fletor para a Longarina
-        axs_longarina[1].plot(x_pontos, momento_fletor_por_longarina, color="purple", label="Momento Fletor")
-        axs_longarina[1].fill_between(x_pontos, momento_fletor_por_longarina, color="purple", alpha=0.3)
-        axs_longarina[1].set_title(f"Momento Fletor - Longarina {longarina}")
-        axs_longarina[1].set_xlabel("Comprimento da Ponte (m)")
-        axs_longarina[1].set_ylabel("Momento Fletor (kN·m)")
-        axs_longarina[1].legend()
-        axs_longarina[1].grid(True)
+    # Diagrama de Momento Fletor para a Longarina
+    axs_longarina[1].plot(x_pontos, momento_fletor_por_longarina, color="purple", label="Momento Fletor")
+    axs_longarina[1].fill_between(x_pontos, momento_fletor_por_longarina, color="purple", alpha=0.3)
+    axs_longarina[1].set_title(f"Momento Fletor - Longarina")
+    axs_longarina[1].set_xlabel("Comprimento da Ponte (m)")
+    axs_longarina[1].set_ylabel("Momento Fletor (kN·m)")
+    axs_longarina[1].legend()
+    axs_longarina[1].grid(True)
 
-        # Exibindo o gráfico na aplicação Streamlit para cada longarina
-        plt.tight_layout()
-        st.pyplot(fig_longarina)
+    # Exibindo o gráfico na aplicação Streamlit para cada longarina
+    plt.tight_layout()
+    st.pyplot(fig_longarina)
